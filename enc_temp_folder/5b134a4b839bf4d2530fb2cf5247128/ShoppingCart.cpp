@@ -40,7 +40,6 @@ bool ShoppingCart::removeBook(Book* bk)
 			cart.remove(b);
 			return true;
 		}
-		return false;
 	}
 }
 
