@@ -116,5 +116,12 @@ namespace ShoppingCartTest
 			cart.addBook(new Book("The partner", 9.99));
 			Assert::AreEqual(9.99, cart.getSubTotal());
 		}
+
+		TEST_METHOD(testCheckOutNoItems)
+		{
+			ShoppingCart cart;
+			auto func = [&cart] {cart.checkout(); };
+			Assert::ExpectException<logic_error>(func);
+		}
 	};
 }

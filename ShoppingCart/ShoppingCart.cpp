@@ -55,7 +55,10 @@ double ShoppingCart::getSubTotal()
 
 bool ShoppingCart::checkout()
 {
-
+	if (cart.size() == 0)
+	{
+		throw logic_error("No items in cart");
+	}
 	return false;
 }
 
