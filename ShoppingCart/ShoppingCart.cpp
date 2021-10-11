@@ -30,6 +30,11 @@ int ShoppingCart::addAll(list<Book*> books)
 	}
 	return added;
 }
+bool ShoppingCart::removeBook(Book* bk)
+{
+	return false;
+}
+
 int main()
 {
 	return 0;

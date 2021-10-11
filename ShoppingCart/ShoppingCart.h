@@ -9,5 +9,6 @@ public :
 	bool addBook(Book* b);
 	int size();
 	int addAll(list<Book*> books);
+	bool removeBook(Book* bk);
 	
 };
