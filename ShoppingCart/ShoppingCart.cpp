@@ -43,6 +43,15 @@ bool ShoppingCart::removeBook(Book* bk)
 		return false;
 	}
 }
+double ShoppingCart::getSubTotal()
+{
+	double total = 0.00;
+	for(Book* b : cart)
+	{
+		total += b->price;
+	}
+	return total;
+}
 
 int main()
 {

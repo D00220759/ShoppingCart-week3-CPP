@@ -95,5 +95,26 @@ namespace ShoppingCartTest
 			Assert::IsFalse(cart.removeBook(nullptr));
 			Assert::AreEqual(1, cart.size());
 		}
+
+		TEST_METHOD(testSubTotalNoBook)
+		{
+			ShoppingCart cart;
+			Assert::AreEqual(0.00, cart.getSubTotal());
+		}
+
+		TEST_METHOD(testSubTotalOneBook)
+		{
+			ShoppingCart cart;
+			cart.addBook(new Book("The partner", 9.99));
+			Assert::AreEqual(9.99, cart.getSubTotal());
+		}
+
+		TEST_METHOD(testSubTotalTwoBook)
+		{
+			ShoppingCart cart;
+			cart.addBook(new Book("The partner", 9.99));
+			cart.addBook(new Book("The partner", 9.99));
+			Assert::AreEqual(9.99, cart.getSubTotal());
+		}
 	};
 }

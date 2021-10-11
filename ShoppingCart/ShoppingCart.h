@@ -10,5 +10,6 @@ public :
 	int size();
 	int addAll(list<Book*> books);
 	bool removeBook(Book* bk);
+	double getSubTotal();
 	
 };
