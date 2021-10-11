@@ -11,5 +11,5 @@ public :
 	int addAll(list<Book*> books);
 	bool removeBook(Book* bk);
 	double getSubTotal();
-	
+	bool checkout();
 };

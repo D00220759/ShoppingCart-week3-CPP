@@ -53,6 +53,12 @@ double ShoppingCart::getSubTotal()
 	return total;
 }
 
+bool ShoppingCart::checkout()
+{
+
+	return false;
+}
+
 int main()
 {
 	return 0;
